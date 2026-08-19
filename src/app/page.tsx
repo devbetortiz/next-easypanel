@@ -1,19 +1,47 @@
-const services = [["01", "Aplicações Next.js", "SSR, App Router, dashboards, SaaS e experiências responsivas.", "NEXT.JS / TS"], ["02", "APIs & Integrações", "Node.js, bancos de dados, autenticação e integrações de serviços.", "REST / SQL"], ["03", "Automação & IA", "n8n, agentes inteligentes e fluxos que eliminam trabalho repetitivo.", "N8N / AI"]];
-const projects = [["analytics", "ANALYTICS", "84.2K", "↑ 18.4%", "Dashboard SaaS", "Painel de métricas e gestão para operação digital.", "Next.js • Supabase • Recharts"], ["workflow", "WORKFLOW", "TRIGGER → AI → CRM", "✓ RUNNING", "Plataforma de Automação", "Fluxos inteligentes conectando atendimento, IA e CRM.", "Next.js • n8n • OpenAI"], ["erp", "ERP WEB", "PEDIDOS  128", "ESTOQUE  94%", "Sistema de Gestão", "Gestão web responsiva para processos e indicadores.", "Next.js • Prisma • PostgreSQL"]];
-const steps = [["01", "Descoberta", "Objetivos, usuários e requisitos essenciais."], ["02", "Arquitetura", "Dados, integrações e decisões técnicas."], ["03", "Construção", "UI, código, testes e ciclos curtos."], ["04", "Deploy & evolução", "Entrega, métricas e melhoria contínua."]];
-const tech = ["Next.js", "TypeScript", "React", "Node.js", "PostgreSQL", "Prisma", "Supabase", "Tailwind CSS", "n8n", "Docker", "Vercel", "Git"];
+const expertise = [
+  ["01", "Produtos web", "Interfaces responsivas e bem estruturadas com React, Next.js, TypeScript e Tailwind CSS."],
+  ["02", "APIs e integrações", "APIs REST, autenticação, webhooks e bancos de dados conectando as partes certas do produto."],
+  ["03", "Automação", "Fluxos com n8n e IA para reduzir tarefas manuais e tornar operações mais eficientes."],
+];
+
+const skills = ["React", "Next.js", "TypeScript", "Node.js", "Supabase", "PostgreSQL", "MongoDB", "Docker", "n8n", "Git / GitHub"];
 
 export default function Home() {
-  return <main>
-    <section className="hero" id="inicio"><nav className="nav" aria-label="Navegação principal"><a className="brand" href="#inicio">DEVBETORTIZ</a><div className="nav-links"><a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#stack">Stack</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div><span className="availability">● DISPONÍVEL</span></nav><div className="hero-content"><p className="eyebrow">NEXT.JS • TYPESCRIPT • WEB SYSTEMS</p><h1>Transformo ideias em<br />sistemas web de alto impacto.</h1><p className="intro">Desenvolvimento de aplicações modernas, escaláveis e rápidas com Next.js — do produto ao deploy.</p><div className="hero-actions"><a className="button primary" href="#projetos">Ver projetos <span>→</span></a><a className="button secondary" href="#contato">Falar comigo</a></div></div><div className="code-window"><div className="window-controls"><i /><i /><i /></div><pre>{`const developer = {
-  stack: ["Next.js", "TypeScript", "Node.js"], focus: "performance + UX",
-  status: "building what comes next"
-}`}</pre></div></section>
-    <section className="expertise" id="sobre"><div className="section-inner"><p className="section-eyebrow">O QUE EU CONSTRUO</p><h2>Sistemas pensados para crescer.</h2><p className="section-subtitle">Arquitetura sólida, interfaces claras e performance desde a primeira linha de código.</p><div className="service-grid">{services.map(([number, title, description, tag]) => <article className="service-card" key={number}><strong>{number}</strong><h3>{title}</h3><p>{description}</p><span>{tag}</span></article>)}</div></div></section>
-    <section className="projects" id="projetos"><div className="section-inner"><p className="section-eyebrow">TRABALHOS SELECIONADOS</p><h2>Projetos que resolvem problemas reais.</h2><p className="section-subtitle">Uma seleção de produtos digitais com foco em engenharia, experiência e resultado.</p><div className="project-grid">{projects.map(([type, heading, metric, status, title, description, stack]) => <article className="project-card" key={title}><div className={`project-visual ${type}`}>{heading}<br /><b>{metric}</b><br /><em>{status}</em></div><h3>{title}</h3><p>{description}</p><span>{stack}</span><a href="#contato">Ver case ↗</a></article>)}</div></div></section>
-    <section className="stack" id="stack"><div className="section-inner"><p className="section-eyebrow">TECNOLOGIAS</p><h2>Stack moderna. Decisões pragmáticas.</h2><p className="section-subtitle">Ferramentas escolhidas pelo problema — não pela moda da semana.</p><div className="tech-grid">{tech.map((item) => <span key={item}>{item}</span>)}</div></div></section>
-    <section className="process"><div className="section-inner"><p className="section-eyebrow">PROCESSO</p><h2>Do problema ao deploy, sem fumaça.</h2><p className="section-subtitle">Um fluxo enxuto para reduzir risco e transformar requisitos em software utilizável.</p><div className="process-grid">{steps.map(([number, title, description]) => <article className="step-card" key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>
-    <section className="contact" id="contato"><p>TEM UM PROJETO EM MENTE?</p><h2>Vamos construir algo<br />que mereça existir.</h2><span>Se você precisa de um sistema web rápido, confiável e preparado para evoluir, vamos conversar.</span><a href="mailto:devbetortiz@gmail.com">Iniciar conversa →</a></section>
-    <footer><div><strong>DEVBETORTIZ</strong><span>Next.js Web Systems Developer</span></div><div><p><a href="https://github.com/devbetortiz" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/alberto-cabral-ortiz-de-medeiros-26662011b" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:devbetortiz@gmail.com">Email</a></p><span>© 2026 — Construído com Next.js</span></div></footer>
-  </main>;
+  return (
+    <main>
+      <section className="hero" id="inicio">
+        <nav className="nav" aria-label="Navegação principal">
+          <a className="brand" href="#inicio">ALBERTO<span>_</span></a>
+          <div className="nav-links"><a href="#projetos">Projetos</a><a href="#experiencia">Experiência</a><a href="#stack">Stack</a><a href="#contato">Contato</a></div>
+          <a className="status" href="#contato"><i />Disponível remoto</a>
+        </nav>
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">DESENVOLVEDOR FULL STACK</p>
+            <h1>Software útil,<br /><em>do conceito ao deploy.</em></h1>
+            <p className="lead">Sou Alberto Cabral, desenvolvedor focado em aplicações web, integrações e automações que tornam produtos digitais mais claros, rápidos e preparados para evoluir.</p>
+            <div className="actions"><a className="button button-primary" href="#projetos">Conhecer projetos <span>↘</span></a><a className="button button-quiet" href="mailto:devbetortiz@gmail.com">Vamos conversar</a></div>
+          </div>
+          <aside className="profile-card" aria-label="Perfil profissional"><div className="card-top"><span className="orbit" /><span>FULL STACK / BR</span></div><div className="profile-mark">AC</div><div className="card-bottom"><strong>Campo Grande, MS</strong><span>100% remoto · PJ</span></div></aside>
+        </div>
+        <div className="ticker" aria-label="Tecnologias principais"><span>Next.js</span><b>✦</b><span>React</span><b>✦</b><span>Node.js</span><b>✦</b><span>APIs REST</span><b>✦</b><span>Automação n8n</span></div>
+      </section>
+      <section className="intro-section" id="sobre">
+        <div className="section-label">// O QUE EU FAÇO</div>
+        <div className="intro-layout"><h2>Construo experiências digitais que resolvem problemas de verdade.</h2><p>Da interface à integração: transformo requisitos em aplicações web funcionais, com atenção a código, documentação e evolução contínua.</p></div>
+        <div className="expertise-grid">{expertise.map(([number, title, description]) => <article className="expertise-card" key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
+      </section>
+      <section className="projects" id="projetos">
+        <div className="section-heading"><div><div className="section-label">// PROJETOS EM DESTAQUE</div><h2>Trabalho prático, com tecnologia aplicada.</h2></div><p>Dois projetos que demonstram como conecto produto, interface e integrações.</p></div>
+        <div className="project-grid">
+          <article className="project-card featured"><div className="visual visual-barber"><div className="visual-nav"><i /><i /><i /></div><span>VISUAL</span><b>barbearia</b><small>CURSOS · MEMBROS · PAGAMENTOS</small><div className="visual-line" /></div><div className="project-content"><p className="project-index">01 / SaaS EDUCACIONAL</p><h3>Visual Barbearia</h3><p>Aplicação full stack para cursos de barbearia, com autenticação via Google, streaming e módulo financeiro.</p><ul><li>Next.js</li><li>Supabase</li><li>Stripe</li><li>Bunny.net</li></ul><a href="https://www.visualbarbearia.com.br" target="_blank" rel="noreferrer">Visitar projeto <span>↗</span></a></div></article>
+          <article className="project-card"><div className="visual visual-law"><span>LAW<br />PARTNER</span><div className="law-chip">LP</div><small>CONSULTORIA JURÍDICA</small></div><div className="project-content"><p className="project-index">02 / LANDING PAGE</p><h3>Law Partner</h3><p>Single page institucional construída em Next.js, incluindo formulário de contato com envio de e-mail.</p><ul><li>Next.js</li><li>Formulário</li><li>E-mail</li></ul><a href="https://www.lawpartner.com.br" target="_blank" rel="noreferrer">Visitar projeto <span>↗</span></a></div></article>
+        </div>
+      </section>
+      <section className="experience" id="experiencia"><div className="section-label">// EXPERIÊNCIA</div><div className="experience-layout"><h2>Base técnica construída em entregas reais.</h2><article className="role-card"><div className="role-period">09.2022 — 05.2023</div><div><p className="role-company">PSG / INOVVATTI</p><h3>Developer JavaScript Full Stack <span>Júnior</span></h3><p>Desenvolvimento e manutenção de aplicações web com foco em performance e experiência do usuário.</p><div className="role-notes"><span>React + Material UI</span><span>Redux</span><span>APIs REST</span><span>Socket.io</span><span>MongoDB</span><span>CI/CD</span></div></div></article></div></section>
+      <section className="stack" id="stack"><div className="stack-head"><div className="section-label">// FERRAMENTAS</div><h2>Stack com que trabalho.</h2></div><div className="skill-grid">{skills.map((skill, index) => <div key={skill}><span>0{index + 1}</span>{skill}</div>)}</div><div className="education"><div><span>FORMAÇÃO</span><strong>Desenvolvimento Web Full Stack</strong><p>Pós-graduação · 2024</p></div><div><span>FORMAÇÃO</span><strong>DevOps</strong><p>Pós-graduação · 2024</p></div><div><span>EM EVOLUÇÃO</span><strong>Automação com n8n</strong><p>Bootcamp Santander / DIO · 2025</p></div></div></section>
+      <section className="contact" id="contato"><p className="section-label">// PRÓXIMO PASSO</p><h2>Tem uma ideia<br />para colocar no ar?</h2><p>Vamos conversar sobre seu produto, uma integração ou uma automação que pode simplificar sua operação.</p><a href="mailto:devbetortiz@gmail.com">devbetortiz@gmail.com <span>↗</span></a></section>
+      <footer><strong>ALBERTO<span>_</span></strong><p>Desenvolvedor Full Stack · Campo Grande, MS</p><div><a href="https://github.com/devbetortiz" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/alberto-cabral-ortiz-de-medeiros-26662011b" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+    </main>
+  );
 }
